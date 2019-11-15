@@ -15,13 +15,10 @@ function Tap(props) {
     marginBottom: '-5%',
     position: 'relative',
   };
-  var cardStyle = {
-
-  };
 
   return(
-      <div className="col s12 m6 l4">
-        <div style={cardStyle} className="card">
+      <div className="col s12 m6 l3">
+        <div className="card">
           <div style={imgStyle} className="card-image">
             <img src={props.img}/>
             <span style={titleStyle} className="card-title">{props.name}</span>
