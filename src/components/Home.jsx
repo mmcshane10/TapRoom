@@ -5,7 +5,7 @@ function Home() {
     var splashStyle = {
         backgroundImage: `url(${Splash})`,
         backgroundAttachment: 'fixed',
-        height: '800px',
+        height: '1000px',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover'

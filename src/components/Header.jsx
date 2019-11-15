@@ -15,6 +15,10 @@ function Header() {
     marginLeft: '2%',
     color: 'burlywood'
   }
+  var liStyle = {
+    whiteSpace: 'nowrap',
+    overflow: 'hidden'
+  }
 
   return(
     <div>
