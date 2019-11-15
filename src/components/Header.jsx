@@ -9,16 +9,12 @@ function Header() {
   var navStyle = {
     backgroundColor: '#110133',
     borderBottom: 'solid 1px burlywood'
-  }
+  };
   var titleStyle = {
     fontFamily: 'IM Fell English, serif',
     marginLeft: '2%',
     color: 'burlywood'
-  }
-  var liStyle = {
-    whiteSpace: 'nowrap',
-    overflow: 'hidden'
-  }
+  };
 
   return(
     <div>
@@ -26,7 +22,7 @@ function Header() {
         <div style={navStyle} className="nav-wrapper">
           <Link to='/'><i style={iconStyle} className="fas fa-beer fa-4x"><span style={titleStyle}>McShane's</span></i></Link>
           <ul id="nav-mobile" className="right hide-on-med-and-down">
-            <li><a href="">Tap List</a></li>
+            <li><Link to='/taplist'>Tap List</Link></li>
             <li><a href="">Employee Login</a></li>
           </ul>
         </div>

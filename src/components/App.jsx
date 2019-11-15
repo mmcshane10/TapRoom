@@ -2,14 +2,16 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Header from './Header';
 import Home from './Home';
+import TapList from './TapList';
 
 function App() {
   return(
     <div>
       <Header/>
-    <Switch>
+      <Switch>
         <Route exact path='/' component={Home} />
-    </Switch>
+        <Route exact path='/taplist' component={TapList} />
+      </Switch>
     </div>
   );
 }
