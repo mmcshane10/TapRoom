@@ -40,7 +40,7 @@ function Tap(props) {
 Tap.propTypes = {
   brand: PropTypes.string,
   abv: PropTypes.string,
-  pints: PropTypes.string,
+  pints: PropTypes.int,
   img: PropTypes.string,
   price: PropTypes.string,
   name: PropTypes.string

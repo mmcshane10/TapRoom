@@ -63,7 +63,7 @@ var tapList = [
   {
     name: 'Beer 8',
     brand: 'Brewery 8',
-    abv: '4.4.0%',
+    abv: '4.4%',
     price: '$5',
     pints: '124',
     img: Pint

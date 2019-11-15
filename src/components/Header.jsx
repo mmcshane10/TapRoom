@@ -23,7 +23,7 @@ function Header() {
           <Link to='/'><i style={iconStyle} className="fas fa-beer fa-4x"><span style={titleStyle}>McShane's</span></i></Link>
           <ul id="nav-mobile" className="right hide-on-med-and-down">
             <li><Link to='/taplist'>Tap List</Link></li>
-            <li><a href="">Employee Login</a></li>
+            <li><Link to='/addbeer'>Add A Beer</Link></li>
           </ul>
         </div>
       </nav>
