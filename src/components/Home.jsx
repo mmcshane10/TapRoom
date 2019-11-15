@@ -12,6 +12,9 @@ function Home() {
   };
   return (
     <div style={splashStyle}>
+      {/* <div>
+        <p>Welcome to McShane's. A place for all.</p>
+      </div> */}
     </div>
   );
 }

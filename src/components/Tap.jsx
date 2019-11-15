@@ -5,10 +5,12 @@ import 'materialize-css/dist/css/materialize.min.css';
 function Tap(props) {
   var spanStyle = {
     fontWeight: 'bold',
+    color: '#110133',
     marginRight: '2%'
   };
   var titleStyle = {
-    color: '#110133'
+    color: '#110133',
+    // fontWeight: 'bold'
   };
   var imgStyle = {
     paddingTop: '5%',
