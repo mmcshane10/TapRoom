@@ -71,9 +71,13 @@ var tapList = [
 ];
 
 function TapList() {
+  var hStyle = {
+    textAlign: 'center',
+    fontFamily: 'IM Fell English, serif'
+  }
   return (
     <div className='container'>
-      <h4>Currently On Tap:</h4>
+      <h4 style={hStyle}>Currently On Tap</h4>
       <div className='row'>
         {tapList.map((tap, index) =>
           <Tap

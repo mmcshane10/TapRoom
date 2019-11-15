@@ -10,8 +10,13 @@ function NewBeerForm() {
   var buttonStyle = {
     backgroundColor: '#110133'
   }
+  var hStyle = {
+    textAlign: 'center',
+    fontFamily: 'IM Fell English, serif'
+  }
   return (
     <div className='container'>
+      <h4 style={hStyle}>Add a New Keg</h4>
       <form style={formStyle}>
         <div className='input-field col s12'>
           <input
