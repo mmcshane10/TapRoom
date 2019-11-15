@@ -8,17 +8,20 @@ function Tap(props) {
     marginRight: '2%'
   };
   var titleStyle = {
-      color: '#110133'
+    color: '#110133'
   };
   var imgStyle = {
-      paddingTop: '5%',
-      marginBottom: '-5%'
-  }
+    paddingTop: '5%',
+    marginBottom: '-5%',
+    position: 'relative',
+  };
+  var cardStyle = {
+
+  };
 
   return(
-    <div className="row">
       <div className="col s12 m6 l4">
-        <div className="card">
+        <div style={cardStyle} className="card">
           <div style={imgStyle} className="card-image">
             <img src={props.img}/>
             <span style={titleStyle} className="card-title">{props.name}</span>
@@ -34,7 +37,6 @@ function Tap(props) {
           </div> */}
         </div>
       </div>
-    </div>
   );
 }
 
