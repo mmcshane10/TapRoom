@@ -74,7 +74,7 @@ function TapList() {
   var hStyle = {
     textAlign: 'center',
     fontFamily: 'IM Fell English, serif'
-  }
+  };
   return (
     <div className='container'>
       <h4 style={hStyle}>Currently On Tap</h4>

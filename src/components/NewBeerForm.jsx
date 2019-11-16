@@ -6,14 +6,14 @@ function NewBeerForm() {
     marginTop: '30px',
     marginLeft: '20%',
     marginRight: '20%',
-  }
+  };
   var buttonStyle = {
     backgroundColor: '#110133'
-  }
+  };
   var hStyle = {
     textAlign: 'center',
     fontFamily: 'IM Fell English, serif'
-  }
+  };
   return (
     <div className='container'>
       <h4 style={hStyle}>Add a New Keg</h4>

@@ -5,7 +5,7 @@ function Error404() {
     <div className='container'>
 
     </div>
-  )
+  );
 }
 
 export default Error404;

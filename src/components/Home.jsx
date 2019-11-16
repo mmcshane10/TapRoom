@@ -21,13 +21,13 @@ function Home() {
     textAlign: 'center',
     fontSize: '20px',
     color: '#110133'
-  }
+  };
   return (
     <div style={splashStyle}>
-        <div style={cardStyle} className='card'>
-          <p>Welcome to McShane's. An English-style pub for all.</p> 
-          <p>Opening Spring 2020. Check back next week for more information.</p>
-        </div>
+      <div style={cardStyle} className='card'>
+        <p className='flow-text'>Welcome to McShane's. An English-style pub for all.</p> 
+        <p className='flow-text'>Opening Spring 2020. Check back next week for more information.</p>
+      </div>
       
     </div>
   );

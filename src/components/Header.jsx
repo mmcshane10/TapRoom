@@ -24,6 +24,7 @@ function Header() {
           <ul id="nav-mobile" className="right hide-on-med-and-down">
             <li><Link to='/taplist'>Tap List</Link></li>
             <li><Link to='/addbeer'>Add A Beer</Link></li>
+            <li><Link to='/addbeer'>Log In</Link></li>
           </ul>
         </div>
       </nav>
