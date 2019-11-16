@@ -4,6 +4,7 @@ import Header from './Header';
 import Home from './Home';
 import TapList from './TapList';
 import NewBeerForm from './NewBeerForm';
+import Login from './Login';
 
 function App() {
   return(
@@ -13,6 +14,7 @@ function App() {
         <Route exact path='/' component={Home} />
         <Route exact path='/taplist' component={TapList} />
         <Route exact path='/addbeer' component={NewBeerForm} />
+        <Route exact path='/login' component={Login} />
       </Switch>
     </div>
   );

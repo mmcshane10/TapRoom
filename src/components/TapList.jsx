@@ -1,7 +1,6 @@
 import React from 'react';
 import Tap from './Tap';
 import Pint from '../assets/pint.jpg';
-import 'materialize-css/dist/css/materialize.min.css';
 
 var tapList = [
   {

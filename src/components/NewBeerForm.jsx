@@ -1,5 +1,5 @@
 import React from 'react';
-import 'materialize-css/dist/css/materialize.min.css';
+
 
 function NewBeerForm() {
   var formStyle = {
@@ -8,7 +8,8 @@ function NewBeerForm() {
     marginRight: '20%',
   };
   var buttonStyle = {
-    backgroundColor: '#110133'
+    backgroundColor: '#110133',
+    float: 'right'
   };
   var hStyle = {
     textAlign: 'center',
