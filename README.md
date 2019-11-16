@@ -10,7 +10,7 @@ _A react application for my fictional English Pub McShane's. This project is cur
 
 ## Component and Route Structure
 
-![Taproom Schematics](/src/assets/taproomschematic.jpg)
+![Taproom Schematics](/src/assets/TapRoomSchematic.jpg)
 
 ## Setup/Installation Requirements_
 
