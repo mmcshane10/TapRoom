@@ -15,12 +15,13 @@ class EditTap extends React.Component {
     this._brewery = null;
     this._abv = null;
     this._price = null;
+    this._pints = null;
     this.handleAddBeerSubmission = this.handleAddBeerSubmission.bind(this);
   }
 
   handleEditBeerSubmission(event) {
     event.preventDefault();
-    this.props.onEditBeerSubmission({ name: this._name.value, brewery: this._brewery.value, abv: this._abv.value, price: this._price.value, pints: 124, img: Pint, id: v4() });
+    this.props.onEditBeerSubmission({ name: this._name.value, brewery: this._brewery.value, abv: this._abv.value, price: this._price.value, pints: this._name.value, img: Pint, id: props.id });
     this._name.value = '';
     this._brewery.value = '';
     this._abv.value = '';
@@ -50,29 +51,38 @@ class EditTap extends React.Component {
             <input
               type='text'
               id='name'
-              placeholder='Beer Name'
+              defaultValue={props.name}
               ref={(input) => { this._name = input; }} />
           </div>
           <div className='input-field col s12'>
             <input
               type='text'
               id='brewery'
-              placeholder='Brewery'
+              defaultValue={props.brewery}
               ref={(input) => { this._brewery = input; }} />
           </div>
           <div className='input-field col s12'>
             <input
               type='text'
               id='abv'
-              placeholder='ABV%'
+              defaultValue={props.abv}
               ref={(input) => { this._abv = input; }} />
           </div>
           <div className='input-field col s12'>
             <input
               type='text'
               id='price'
-              placeholder='Price'
+              defaultValue={props.price}
               ref={(input) => { this._price = input; }} />
+          </div >
+          <div className='input-field col s12'>
+            <input
+              type='number'
+              min='0'
+              max='124'
+              id='pints'
+              defaultValue={props.pints}
+              ref={(input) => { this._pints = input; }} />
           </div >
           <button style={buttonStyle} type='submit' className='btn-floating btn-large waves-effect waves-light'><i className="material-icons">add</i></button>
         </form>
@@ -80,5 +90,15 @@ class EditTap extends React.Component {
     );
   }
 }
+
+EditTap.propTypes = {
+  brewery: PropTypes.string,
+  abv: PropTypes.number,
+  pints: PropTypes.int,
+  price: PropTypes.number,
+  name: PropTypes.string,
+  id: PropTypes.string,
+  currentRouterPath: PropTypes.string,
+};
 
 export default EditTap;

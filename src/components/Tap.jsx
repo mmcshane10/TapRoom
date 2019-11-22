@@ -104,7 +104,6 @@ Tap.propTypes = {
   id: PropTypes.string,
   onSubtractPint: PropTypes.func,
   currentRouterPath: PropTypes.string,
-  onBeerSelection: PropTypes.func
 };
 
 export default Tap;
