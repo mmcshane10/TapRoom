@@ -22,6 +22,7 @@ function TapList(props) {
             id={tap.id}
             key={tap.id}
             onSubtractPint={props.onSubtractPint}
+            currentRouterPath={props.currentRouterPath}
           />
         )}
       </div>
@@ -31,7 +32,8 @@ function TapList(props) {
 
 TapList.propTypes = {
   tapList: PropTypes.array,
-  onSubtractPint: PropTypes.func
+  onSubtractPint: PropTypes.func,
+  currentRouterPath: PropTypes.string
 };
 
 export default TapList;

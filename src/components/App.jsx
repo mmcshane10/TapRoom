@@ -5,6 +5,7 @@ import Home from './Home';
 import TapList from './TapList';
 import NewBeerForm from './NewBeerForm';
 import Login from './Login';
+import Admin from './Admin';
 
 class App extends React.Component {
 
@@ -45,9 +46,10 @@ class App extends React.Component {
         <Header />
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route exact path='/taplist' render={() => <TapList tapList={this.state.masterBeerList} onSubtractPint={this.handleSubtractPint} />} />
-          <Route exact path='/addbeer' render={() => <NewBeerForm onNewBeerCreation={this.handleAddingBeerToList} />} />
-          <Route exact path='/login' component={Login} />
+          <Route path='/taplist' render={() => <TapList tapList={this.state.masterBeerList} onSubtractPint={this.handleSubtractPint} />} />
+          <Route path='/addbeer' render={() => <NewBeerForm onNewBeerCreation={this.handleAddingBeerToList} />} />
+          <Route path='/login' component={Login} />
+          <Route path='/admin' render={(props) => <Admin tapList={this.state.masterBeerList} currentRouterPath={props.location.pathname} />} />
         </Switch>
       </div>
     );

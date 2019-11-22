@@ -41,6 +41,16 @@ function Tap(props) {
     pintHTML = <p><span style={spanStyle}>Pints:</span>{props.pints}</p>;
   }
 
+  var adminOptions;
+  if (props.currentRouterPath === '/admin') {
+    adminOptions = <div style={actionStyle} className='card-action'>
+      <button style={buttonStyle} onClick={SubtractPintClicked} type='click' className='btn-floating btn-small waves-effect waves-light'><i className='material-icons'>exposure_neg_1</i></button>
+      <button style={buttonStyle} type='click' className='btn-floating btn-small waves-effect waves-yellow'><i className='material-icons'>edit</i></button>
+    </div>;
+  } else {
+    adminOptions = null;
+  }
+
   return(
     <div className='col s6 m4 l3'>
       <div className='card z-depth-2'>
@@ -54,10 +64,11 @@ function Tap(props) {
           <p><span style={spanStyle}>Price:</span>{props.price}</p>
           {pintHTML}
         </div>
-        <div style={actionStyle} className='card-action'>
+        {adminOptions}
+        {/* <div style={actionStyle} className='card-action'>
           <button style={buttonStyle} onClick={SubtractPintClicked} type='click' className='btn-floating btn-small waves-effect waves-light'><i className='material-icons'>exposure_neg_1</i></button>
           <button style={buttonStyle} type='click' className='btn-floating btn-small waves-effect waves-yellow'><i className='material-icons'>edit</i></button>
-        </div>
+        </div> */}
       </div>
     </div>
   );
@@ -71,7 +82,8 @@ Tap.propTypes = {
   price: PropTypes.string,
   name: PropTypes.string,
   id: PropTypes.string,
-  onSubtractPint: PropTypes.func
+  onSubtractPint: PropTypes.func,
+  currentRouterPath: PropTypes.string
 };
 
 export default Tap;

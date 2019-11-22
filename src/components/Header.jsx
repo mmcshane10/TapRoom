@@ -24,6 +24,7 @@ function Header() {
             <li><Link to='/taplist'>Tap List</Link></li>
             <li><Link to='/addbeer'>Add A Beer</Link></li>
             <li><Link to='/login'>Log In</Link></li>
+            <li><Link to='/admin'>Admin</Link></li>
           </ul>
         </div>
       </nav>
