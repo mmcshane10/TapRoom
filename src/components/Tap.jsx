@@ -5,7 +5,7 @@ function Tap(props) {
   var spanStyle = {
     fontWeight: 'bold',
     color: '#110133',
-    marginRight: '2%'
+    marginRight: '2%',
   };
   var titleStyle = {
     color: '#110133'
@@ -22,23 +22,34 @@ function Tap(props) {
     display: 'flex',
     justifyContent: 'space-between'
   };
-
   var lowKegStyle = {
     fontWeight: 'bold',
     color: 'red',
     marginRight: '2%'
   };
+  var iStyle = {
+    color: 'red',
+    fontSize: '18px',
+    marginLeft: '2%'
+  }
 
   function SubtractPintClicked() {
     let searchId = props.id;
     props.onSubtractPint(searchId);
   }
 
-  var pintHTML;
+  var pintDisplay;
   if (props.pints < 20) {
-    pintHTML = <p style={lowKegStyle}><span>Pints: </span>{props.pints}</p>;
+    pintDisplay = <p style={lowKegStyle}><span>Pints: </span>{props.pints}</p>;
   } else {
-    pintHTML = <p><span style={spanStyle}>Pints:</span>{props.pints}</p>;
+    pintDisplay = <p><span style={spanStyle}>Pints:</span>{props.pints}</p>;
+  }
+
+  var abvDisplay;
+  if (props.abv > 7.9) {
+    abvDisplay = <p><span style={spanStyle}>ABV:</span>{props.abv}<i style={iStyle}className="material-icons">new_releases</i></p>;
+  } else {
+    abvDisplay = <p><span style={spanStyle}>ABV:</span>{props.abv}</p>;
   }
 
   var adminOptions;
@@ -60,9 +71,9 @@ function Tap(props) {
         </div>
         <div className='card-content'>
           <p><span style={spanStyle}>Brewery:</span>{props.brewery}</p>
-          <p><span style={spanStyle}>ABV:</span>{props.abv}</p>
+          {abvDisplay}
           <p><span style={spanStyle}>Price:</span>{props.price}</p>
-          {pintHTML}
+          {pintDisplay}
         </div>
         {adminOptions}
       </div>
@@ -72,7 +83,7 @@ function Tap(props) {
 
 Tap.propTypes = {
   brewery: PropTypes.string,
-  abv: PropTypes.string,
+  abv: PropTypes.number,
   pints: PropTypes.int,
   img: PropTypes.string,
   price: PropTypes.string,
