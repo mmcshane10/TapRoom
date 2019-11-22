@@ -20,7 +20,7 @@ class NewBeerForm extends React.Component {
 
   handleAddBeerSubmission(event) {
     event.preventDefault();
-    this.props.onNewFriendCreation({ name: this._name.value, brewery: this._brewery.value, abv: this._abv.value, price: this._price.value, pints: 124, img: Pint, id: v4() });
+    this.props.onNewBeerCreation({ name: this._name.value, brewery: this._brewery.value, abv: this._abv.value, price: this._price.value, pints: 124, img: Pint, id: v4() });
     this._name.value = '';
     this._brewery.value = '';
     this._abv.value = '';
@@ -80,5 +80,9 @@ class NewBeerForm extends React.Component {
     );
   }
 }
+
+NewBeerForm.PropTypes = {
+  onNewBeerCreation: PropTypes.func
+};
 
 export default NewBeerForm;
