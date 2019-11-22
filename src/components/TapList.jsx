@@ -35,38 +35,6 @@ var tapList = [
     pints: '124',
     img: Pint
   },
-  {
-    name: 'Beer 5',
-    brand: 'Brewery 5',
-    abv: '8.0%',
-    price: '$7',
-    pints: '124',
-    img: Pint
-  },
-  {
-    name: 'Beer 6',
-    brand: 'Brewery 6',
-    abv: '7.0%',
-    price: '$6',
-    pints: '124',
-    img: Pint
-  },
-  {
-    name: 'Beer 7',
-    brand: 'Brewery 7',
-    abv: '11.0%',
-    price: '$8',
-    pints: '124',
-    img: Pint
-  },
-  {
-    name: 'Beer 8',
-    brand: 'Brewery 8',
-    abv: '4.4%',
-    price: '$5',
-    pints: '124',
-    img: Pint
-  },
 ];
 
 function TapList() {
