@@ -1,6 +1,6 @@
 # _McShane's Taproom_
 
-#### _A react application for my fictional English-style pub; 15-November-2019_
+#### _A react application for my fictional English-style pub; 22-November-2019_
 
 #### By _**Mike McShane**_
 
@@ -10,7 +10,7 @@ _A react application for my fictional English Pub McShane's. This project is cur
 
 ## Component and Route Structure
 
-![Taproom Schematics](./src/assets/TapRoomSchematic(1).jpg)
+![Taproom Schematics](/src/assets/TapRoomSchematic(1).jpg)
 
 ## Setup/Installation Requirements_
 
