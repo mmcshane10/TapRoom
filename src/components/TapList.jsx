@@ -1,43 +1,8 @@
 import React from 'react';
 import Tap from './Tap';
-import Pint from '../assets/pint.jpg';
+import PropTypes from 'prop-types';
 
-var tapList = [
-  {
-    name: 'Beer 1',
-    brand: 'Brewery 1',
-    abv: '5.0%',
-    price: '$6',
-    pints: '124',
-    img: Pint
-  },
-  {
-    name: 'Beer 2',
-    brand: 'Brewery 2',
-    abv: '6.0%',
-    price: '$7',
-    pints: '124',
-    img: Pint
-  },
-  {
-    name: 'Beer 3',
-    brand: 'Brewery 3',
-    abv: '6.9%',
-    price: '$6',
-    pints: '124',
-    img: Pint
-  },
-  {
-    name: 'Beer 4',
-    brand: 'Brewery 4',
-    abv: '4.0%',
-    price: '$5',
-    pints: '124',
-    img: Pint
-  },
-];
-
-function TapList() {
+function TapList(props) {
   var hStyle = {
     textAlign: 'center',
     fontFamily: 'IM Fell English, serif'
@@ -46,7 +11,7 @@ function TapList() {
     <div className='container'>
       <h4 style={hStyle}>Currently On Tap</h4>
       <div className='row'>
-        {tapList.map((tap, index) =>
+        {props.tapList.map((tap) =>
           <Tap
             name={tap.name}
             brand={tap.brand}
@@ -54,12 +19,16 @@ function TapList() {
             price={tap.price}
             pints={tap.pints}
             img={tap.img}
-            key={index}
+            key={tap.id}
           />
         )}
       </div>
     </div>
   );
 }
+
+TapList.propTypes = {
+  tapList: PropTypes.array
+};
 
 export default TapList;

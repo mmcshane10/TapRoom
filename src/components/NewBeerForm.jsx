@@ -45,7 +45,7 @@ class NewBeerForm extends React.Component {
     return (
       <div className='container'>
         <h4 style={hStyle}>Add a New Keg</h4>
-        <form style={inputStyle} onSubmit={this.handleAddBeerSubmission}>
+        <form style={formStyle} onSubmit={this.handleAddBeerSubmission}>
           <div className='input-field col s12'>
             <input
               type='text'

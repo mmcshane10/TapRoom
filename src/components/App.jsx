@@ -11,14 +11,14 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      masterBeerList = []
+      masterBeerList: []
     };
     this.handleAddingBeerToList = this.handleAddingBeerToList.bind(this);
   }
 
-  handleAddingBeerToList() {
+  handleAddingBeerToList(newBeer) {
     var newMasterBeerList = this.state.masterBeerList.slice();
-    newMasterBeerList.push(newFriend);
+    newMasterBeerList.push(newBeer);
     this.setState({ masterBeerList: newMasterBeerList });
   }
 
@@ -29,7 +29,7 @@ class App extends React.Component {
         <Header />
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route exact path='/taplist' component={TapList} />
+          <Route exact path='/taplist' render={() => <TapList tapList={this.state.masterBeerList} />} />
           <Route exact path='/addbeer' render={() => <NewBeerForm onNewBeerCreation={this.handleAddingBeerToList} />} />
           <Route exact path='/login' component={Login} />
         </Switch>
