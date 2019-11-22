@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
 import Pint from '../assets/pint.jpg';
+import './styles.css';
 
 
 class NewBeerForm extends React.Component {

@@ -27,7 +27,12 @@ class App extends React.Component {
     var newMasterBeerList = this.state.masterBeerList.slice();
     for (let i = 0; i < newMasterBeerList.length; i++) {
       if (newMasterBeerList[i].id == searchId) {
-        newMasterBeerList[i].pints--;
+        if (newMasterBeerList[i].pints > 1) {
+          newMasterBeerList[i].pints--;
+        }
+        else {
+          newMasterBeerList[i].pints = 0;
+        }
       }
     }
     this.setState({ masterBeerList: newMasterBeerList });

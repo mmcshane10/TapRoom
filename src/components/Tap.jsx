@@ -8,8 +8,7 @@ function Tap(props) {
     marginRight: '2%'
   };
   var titleStyle = {
-    color: '#110133',
-    // fontWeight: 'bold'
+    color: '#110133'
   };
   var imgStyle = {
     paddingTop: '5%',
@@ -24,23 +23,36 @@ function Tap(props) {
     justifyContent: 'space-between'
   };
 
+  var lowKegStyle = {
+    fontWeight: 'bold',
+    color: 'red',
+    marginRight: '2%'
+  };
+
   function SubtractPintClicked() {
     let searchId = props.id;
     props.onSubtractPint(searchId);
   }
 
+  var pintHTML;
+  if (props.pints < 20) {
+    pintHTML = <p style={lowKegStyle}><span>Pints: </span>{props.pints}</p>;
+  } else {
+    pintHTML = <p><span style={spanStyle}>Pints:</span>{props.pints}</p>;
+  }
+
   return(
-    <div className='col s12 m6 l3'>
+    <div className='col s6 m4 l3'>
       <div className='card z-depth-2'>
         <div style={imgStyle} className='card-image'>
           <img src={props.img}/>
           <span style={titleStyle} className='card-title'>{props.name}</span>
         </div>
         <div className='card-content'>
-          <p><span style={spanStyle}>Brewery:</span>{props.brand}</p>
+          <p><span style={spanStyle}>Brewery:</span>{props.brewery}</p>
           <p><span style={spanStyle}>ABV:</span>{props.abv}</p>
           <p><span style={spanStyle}>Price:</span>{props.price}</p>
-          <p><span style={spanStyle}>Pints:</span>{props.pints}</p>
+          {pintHTML}
         </div>
         <div style={actionStyle} className='card-action'>
           <button style={buttonStyle} onClick={SubtractPintClicked} type='click' className='btn-floating btn-small waves-effect waves-light'><i className='material-icons'>exposure_neg_1</i></button>
@@ -52,7 +64,7 @@ function Tap(props) {
 }
 
 Tap.propTypes = {
-  brand: PropTypes.string,
+  brewery: PropTypes.string,
   abv: PropTypes.string,
   pints: PropTypes.int,
   img: PropTypes.string,
@@ -61,7 +73,6 @@ Tap.propTypes = {
   id: PropTypes.string,
   onSubtractPint: PropTypes.func
 };
-
 
 export default Tap;
 

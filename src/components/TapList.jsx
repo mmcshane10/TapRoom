@@ -14,7 +14,7 @@ function TapList(props) {
         {props.tapList.map((tap) =>
           <Tap
             name={tap.name}
-            brand={tap.brand}
+            brewery={tap.brewery}
             abv={tap.abv}
             price={tap.price}
             pints={tap.pints}
