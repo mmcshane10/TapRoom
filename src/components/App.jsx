@@ -14,11 +14,22 @@ class App extends React.Component {
       masterBeerList: []
     };
     this.handleAddingBeerToList = this.handleAddingBeerToList.bind(this);
+    this.handleSubtractPint = this.handleSubtractPint.bind(this);
   }
 
   handleAddingBeerToList(newBeer) {
     var newMasterBeerList = this.state.masterBeerList.slice();
     newMasterBeerList.push(newBeer);
+    this.setState({ masterBeerList: newMasterBeerList });
+  }
+
+  handleSubtractPint(searchId) {
+    var newMasterBeerList = this.state.masterBeerList.slice();
+    for (let i = 0; i < newMasterBeerList.length; i++) {
+      if (newMasterBeerList[i].id == searchId) {
+        newMasterBeerList[i].pints--;
+      }
+    }
     this.setState({ masterBeerList: newMasterBeerList });
   }
 
@@ -29,7 +40,7 @@ class App extends React.Component {
         <Header />
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route exact path='/taplist' render={() => <TapList tapList={this.state.masterBeerList} />} />
+          <Route exact path='/taplist' render={() => <TapList tapList={this.state.masterBeerList} onSubtractPint={this.handleSubtractPint} />} />
           <Route exact path='/addbeer' render={() => <NewBeerForm onNewBeerCreation={this.handleAddingBeerToList} />} />
           <Route exact path='/login' component={Login} />
         </Switch>

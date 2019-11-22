@@ -19,7 +19,9 @@ function TapList(props) {
             price={tap.price}
             pints={tap.pints}
             img={tap.img}
+            id={tap.id}
             key={tap.id}
+            onSubtractPint={props.onSubtractPint}
           />
         )}
       </div>
@@ -28,7 +30,8 @@ function TapList(props) {
 }
 
 TapList.propTypes = {
-  tapList: PropTypes.array
+  tapList: PropTypes.array,
+  onSubtractPint: PropTypes.func
 };
 
 export default TapList;

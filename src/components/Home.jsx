@@ -16,7 +16,7 @@ function Home() {
   var cardStyle = {
     backgroundColor: 'rgb(255, 255, 255, 0.75)',
     width: '40%',
-    padding: '5',
+    padding: '5px',
     bottom: '20%',
     textAlign: 'center',
     fontSize: '20px',
