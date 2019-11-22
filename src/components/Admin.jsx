@@ -17,7 +17,7 @@ function Admin(props) {
 Admin.propTypes = {
   tapList: PropTypes.array,
   currentRouterPath: PropTypes.string.isRequired,
-  onSubtractPint: PropTypes.func
+  onSubtractPint: PropTypes.func,
 };
 
 export default Admin;

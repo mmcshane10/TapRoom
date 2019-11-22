@@ -33,7 +33,7 @@ function TapList(props) {
 TapList.propTypes = {
   tapList: PropTypes.array,
   onSubtractPint: PropTypes.func,
-  currentRouterPath: PropTypes.string
+  currentRouterPath: PropTypes.string,
 };
 
 export default TapList;

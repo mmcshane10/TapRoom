@@ -12,7 +12,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      masterBeerList: []
+      masterBeerList: [],
     };
     this.handleAddingBeerToList = this.handleAddingBeerToList.bind(this);
     this.handleSubtractPint = this.handleSubtractPint.bind(this);
@@ -40,7 +40,6 @@ class App extends React.Component {
   }
 
   render() {
-
     return (
       <div>
         <Header />
@@ -55,5 +54,4 @@ class App extends React.Component {
     );
   }
 }
-
 export default App;
