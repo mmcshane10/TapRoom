@@ -46,10 +46,10 @@ class App extends React.Component {
         <Header />
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route path='/taplist' render={() => <TapList tapList={this.state.masterBeerList} onSubtractPint={this.handleSubtractPint} />} />
+          <Route path='/taplist' render={() => <TapList tapList={this.state.masterBeerList} />} />
           <Route path='/addbeer' render={() => <NewBeerForm onNewBeerCreation={this.handleAddingBeerToList} />} />
           <Route path='/login' component={Login} />
-          <Route path='/admin' render={(props) => <Admin tapList={this.state.masterBeerList} currentRouterPath={props.location.pathname} />} />
+          <Route path='/admin' render={(props) => <Admin tapList={this.state.masterBeerList} currentRouterPath={props.location.pathname} onSubtractPint={this.handleSubtractPint} />} />
         </Switch>
       </div>
     );

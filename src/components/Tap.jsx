@@ -65,10 +65,6 @@ function Tap(props) {
           {pintHTML}
         </div>
         {adminOptions}
-        {/* <div style={actionStyle} className='card-action'>
-          <button style={buttonStyle} onClick={SubtractPintClicked} type='click' className='btn-floating btn-small waves-effect waves-light'><i className='material-icons'>exposure_neg_1</i></button>
-          <button style={buttonStyle} type='click' className='btn-floating btn-small waves-effect waves-yellow'><i className='material-icons'>edit</i></button>
-        </div> */}
       </div>
     </div>
   );
