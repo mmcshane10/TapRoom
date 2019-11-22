@@ -4,7 +4,8 @@ import { v4 } from 'uuid';
 import Pint from '../assets/pint.jpg';
 import './styles.css';
 
-class EditTap extends React.Component {
+
+class NewBeerForm extends React.Component {
 
   constructor(props) {
     super(props);
@@ -18,9 +19,9 @@ class EditTap extends React.Component {
     this.handleAddBeerSubmission = this.handleAddBeerSubmission.bind(this);
   }
 
-  handleEditBeerSubmission(event) {
+  handleAddBeerSubmission(event) {
     event.preventDefault();
-    this.props.onEditBeerSubmission({ name: this._name.value, brewery: this._brewery.value, abv: this._abv.value, price: this._price.value, pints: 124, img: Pint, id: v4() });
+    this.props.onNewBeerCreation({ name: this._name.value, brewery: this._brewery.value, abv: this._abv.value, price: this._price.value, pints: 124, img: Pint, id: v4() });
     this._name.value = '';
     this._brewery.value = '';
     this._abv.value = '';
@@ -44,13 +45,13 @@ class EditTap extends React.Component {
     };
     return (
       <div className='container'>
-        <h4 style={hStyle}>Edit Keg Details</h4>
+        <h4 style={hStyle}>Add a New Keg</h4>
         <form style={formStyle} onSubmit={this.handleAddBeerSubmission}>
           <div className='input-field col s12'>
             <input
               type='text'
               id='name'
-              placeholder='Beer Name'
+              placeholder='Beer Name' 
               ref={(input) => { this._name = input; }} />
           </div>
           <div className='input-field col s12'>
@@ -81,4 +82,8 @@ class EditTap extends React.Component {
   }
 }
 
-export default EditTap;
+NewBeerForm.PropTypes = {
+  onNewBeerCreation: PropTypes.func
+};
+
+export default NewBeerForm;
