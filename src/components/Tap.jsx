@@ -2,6 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Tap(props) {
+
+  var cardStyle = {
+    minWidth: '30%'
+  };
   var spanStyle = {
     fontWeight: 'bold',
     color: '#110133',
@@ -31,13 +35,13 @@ function Tap(props) {
     color: 'red',
     fontSize: '18px',
     marginLeft: '2%'
-  }
+  };
 
   var ibStyle = {
     color: 'green',
     fontSize: '18px',
     marginLeft: '2%'
-  }
+  };
 
   function SubtractPintClicked() {
     let searchId = props.id;
@@ -76,7 +80,7 @@ function Tap(props) {
   }
 
   return(
-    <div className='col s6 m4 l3'>
+    <div style={cardStyle} className='col s12 m6 l4'>
       <div className='card z-depth-2'>
         <div style={imgStyle} className='card-image'>
           <img src={props.img}/>

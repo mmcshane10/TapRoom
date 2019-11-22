@@ -16,7 +16,7 @@ class EditTap extends React.Component {
     this._abv = null;
     this._price = null;
     this._pints = null;
-    this.handleAddBeerSubmission = this.handleAddBeerSubmission.bind(this);
+    this.handleEditBeerSubmission = this.handleEditBeerSubmission.bind(this);
   }
 
   handleEditBeerSubmission(event) {
