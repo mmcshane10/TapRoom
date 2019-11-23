@@ -43,10 +43,14 @@ function Tap(props) {
     marginLeft: '2%'
   };
 
-  function SubtractPintClicked() {
+  function subtractPintClicked() {
     let searchId = props.id;
     props.onSubtractPint(searchId);
   }
+
+  // function editBeerClicked() {
+  //   props.OnEditBeerClick({name: prop.name, brewery: prop.brewery, abv: prop.abv, price: prop.price, pints: prop.pints, img: props.img, id: prop.id })
+  // }
 
   var pintDisplay;
   if (props.pints < 20) {
@@ -72,7 +76,7 @@ function Tap(props) {
   var adminOptions;
   if (props.currentRouterPath === '/admin') {
     adminOptions = <div style={actionStyle} className='card-action'>
-      <button style={buttonStyle} onClick={SubtractPintClicked} type='click' className='btn-floating btn-small waves-effect waves-light'><i className='material-icons'>exposure_neg_1</i></button>
+      <button style={buttonStyle} onClick={subtractPintClicked} type='click' className='btn-floating btn-small waves-effect waves-light'><i className='material-icons'>exposure_neg_1</i></button>
       <button style={buttonStyle} type='click' className='btn-floating btn-small waves-effect waves-yellow'><i className='material-icons'>edit</i></button>
     </div>;
   } else {

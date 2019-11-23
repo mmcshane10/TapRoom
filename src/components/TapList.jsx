@@ -7,9 +7,25 @@ function TapList(props) {
     textAlign: 'center',
     fontFamily: 'IM Fell English, serif'
   };
+  var iaStyle = {
+    color: 'red',
+    fontSize: '18px',
+    marginLeft: '2%',
+  };
+  var ibStyle = {
+    color: 'green',
+    fontSize: '18px',
+    marginLeft: '2%',
+  };
+  var pStyle = {
+    textAlign: 'center'
+  }
+
   return (
     <div className='container'>
       <h4 style={hStyle}>Currently On Tap</h4>
+      <p style={pStyle}><i style={iaStyle} className="material-icons">new_releases</i> = High ABV Content</p>
+      <p style={pStyle}><i style={ibStyle} className="material-icons">monetization_on</i> = Beer on Sale</p>
       <div className='row'>
         {props.tapList.map((tap) =>
           <Tap

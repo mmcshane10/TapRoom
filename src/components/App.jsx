@@ -50,7 +50,7 @@ class App extends React.Component {
           <Route path='/addbeer' render={() => <NewBeerForm onNewBeerCreation={this.handleAddingBeerToList} />} />
           <Route path='/login' component={Login} />
           <Route path='/admin' render={(props) => <Admin tapList={this.state.masterBeerList} currentRouterPath={props.location.pathname} onSubtractPint={this.handleSubtractPint} />} />
-          <Route path='edit' component={EditTap} />
+          {/* <Route path='/edit' component={EditTap} /> */}
         </Switch>
       </div>
     );
